@@ -1,0 +1,32 @@
+<div class="container-fluid" [ngStyle]="newBackground">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+        <h3>Completed List</h3>
+    </div>
+    <div class="col-12 d-flex justify-content-center mb-2">
+      <button class="btn btn-danger" (click)="onClear()">Clear Completed Task</button>
+    </div>
+</div>
+<div class="row" *ngFor="let completedList of completedLists">
+  <div class="col d-flex justify-content-center">
+    <div class="row" [ngStyle]="formDesign">
+      <div class="col-12 col-md-12">
+        <label for="task">Task</label>
+        <div id="task" class="form-control">{{ completedList.task }}</div>
+      </div>
+      <div class="col-6 col-md-4">
+        <label for="today">Date Started</label>
+        <div id="today" class="form-control">{{ completedList.today | date: 'shortDate' }}</div>
+      </div>
+      <div class="col-6 col-md-4">
+        <label for="completion">Date Completed</label>
+        <div id="comopletion" class="form-control">{{ completedList.completion | date: 'shortDate' }}</div>
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="actual">Actual Completion Date</label>
+        <div id="actual" class="form-control">{{ myDate | date: 'shortDate' }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

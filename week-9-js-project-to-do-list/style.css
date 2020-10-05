@@ -1,0 +1,29 @@
+.container-fluid {
+    background-image: url("https://i.pinimg.com/originals/f6/1e/13/f61e13d1ed448cc42f523f6e7ce70d7b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+}
+#center {
+    height: 100%;
+}
+#form {
+    width: 100%;
+}
+#form-button {
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+#header {
+    height: 50px;
+}
+input.boxSize {
+    height: 20px;
+    width: 20px;
+}
+#mainContent {
+    height: calc(100vh - 50px);
+}

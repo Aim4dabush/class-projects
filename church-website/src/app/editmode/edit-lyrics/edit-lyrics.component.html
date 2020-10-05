@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="editSongLyricsForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="title">Title</label>
+                        <input type="text" formControlName="songTitle" id="title" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="artist">Artist</label>
+                        <input type="text" formControlName="artist" id="artist" class="form-control">
+                    </div>
+                    <div class="col-12">
+                        <label for="link">Lyrics URL</label>
+                        <input type="text" formControlName="lyricLink" id="link" class="form-control">
+                    </div>
+                    <div class="col mt-3">
+                        <button class="btn btn-success d-inline-flex" type="submit" [disabled]="!editSongLyricsForm.valid"><i class="far fa-check-square"> Submit</i></button>
+                        <p class="d-inline-flex" *ngIf="!editSongLyricsForm.valid">* Please fill all input to sumbit.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <div class="row" *ngFor="let songLyric of songLyrics; let i = index">
+                <div class="col-12">
+                    <label for="title">Song Title</label>
+                    <p class="form-control" id="title">{{ songLyric.songTitle }}</p>
+                </div>
+                <div class="col-12">
+                    <label for="artist">Artist</label>
+                    <p class="form-control" id="artist">{{ songLyric.artist }}</p>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger" (click)="onDelete(i)"><i class="fas fa-trash-alt"></i> Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

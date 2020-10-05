@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf="usernameEntered">
+    <div class="navbar-brand">{{ username }}'s App</div>
+
+    <button class="navbar-toggler" (click)="menuCollapse = !menuCollapse" type="button">&#9776;</button>
+    
+    <div class="collapse navbar-collapse" [ngbCollapse]="menuCollapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/form" [ngStyle]="navBarLinkStyle" (click)="menuCollapse = true">Task Form</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/active" [ngStyle]="navBarLinkStyle" (click)="menuCollapse = true">Active List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/complete" [ngStyle]="navBarLinkStyle" (click)="menuCollapse = true">Completed List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/welcome" [ngStyle]="navBarLinkStyle" (click)="onLogout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-light w-100 py-3" [ngStyle]="navbarStyle">
+    <span class="navbar-brand" [ngStyle]="brandStyle">City Church Stockton</span>
+
+    <button class="navbar-toggler" (click)="menuCollapse = !menuCollapse" type="button">&#9776;</button>
+
+    <div class="collapse navbar-collapse" [ngbCollapse]="menuCollapse">
+        <ul class="navbar-nav ml-5">
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/beliefs">Beliefs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/leaders">Leaders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/giving">Giving</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/events">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/song-lyrics">Song Lyrics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/request">Request Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="menuCollapse = true" routerLink="/editmode" *ngIf="editMode">Edit Page</a>
+            </li>
+        </ul>
+    </div>
+</nav>

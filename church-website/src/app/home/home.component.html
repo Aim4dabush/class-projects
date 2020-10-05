@@ -1,0 +1,73 @@
+<div class="container-fluid" [ngStyle]="textStyle">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-danger d-flex justify-content-center" role="alert" *ngIf="open">
+                Until further notice Sunday Service will be held in the parking lot at 10am. We will be serving breakfast, water, coffee, and the love of Jesus.
+                <button aria-label="Close" class="close" (click)="onClick(!open)" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <img class="img-fluid"  src="https://nodtyg.bn.files.1drv.com/y4msHmUQSXoVRMMRjOmPDX5dx0fRgOQkQuwt_ENfxc5Ke6YGtW9S-x8GW1-Zm-LrxLeMgagjaxNwbJN08TmD8xGGRTQnu0O3sHTRWgplV-XJjBSRXaZBjj06-lU4uRd2P2Vhvg7TCKy_9P2O5xVpx6dMIhOav5SpH3R3ym--drj_JPQM7zvxhyJ-zaQS0FYDUKZHmjnMoajBjt0l9AkFUF4bQ?width=1024&height=828&cropmode=none" alt="city church">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h4>Sunday Service</h4>
+        </div>
+        <div class="col-12">
+            <div class="row" [ngStyle]="box">
+                <div class="col-6">
+                    <p class="d-block">Prayer:9:30AM</p>
+                    <p class="d-block">Service:10:00AM</p>
+                </div>
+                <div class="col-6">
+                    <label for="address">Address:</label>
+                    <p id="address"><a href="https://goo.gl/maps/5eMqmC8jmG8mcJdJ9">1282 E. Bianchi Rd. Stockton, CA 95210</a></p>
+                </div>
+                <div class="col-12 col-md-3 mt-2">
+                    <label for="stream">Stream:</label>
+                    <p id="stream"><a href="https://www.facebook.com/citychurchstockton/"><i class="fab fa-facebook-square"></i>City Church Stockton</a></p>
+                </div>
+                <div class="col-12 col-md-3 mt-2">
+                     <label for="video">Re-watch Sunday Services:</label>
+                     <p id="video"><a href="https://www.youtube.com/results?search_query=city+church+stockton"><i class="fab fa-youtube"></i>City Church Stockton</a></p>
+                </div>
+                <div class="col-6 mt-2">
+                    <label for="link1">Online Bible:</label>
+                    <p id="link1">Click the link for your online bible- <a href="https://www.bible.com/">www.bible.com</a></p>
+                </div>
+                <div class="col-6 mt-2">
+                    <label for="link2">Bible App:</label>
+                    <p id="link2">Click on your store for your free bible app- <a href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android&_branch_match_id=794678537326270384&utm_source=Bible.com&utm_campaign=Quick%20Link%20-%20App%20Screen%20-%20Android&utm_medium=quick-link"><i class="fab fa-google-play">Google Play</i></a> or  <a href="https://apps.apple.com/app/bible/id282935706?_branch_match_id=794678537326270384&utm_source=Bible.com&utm_campaign=Quick%20Link%20-%20App%20Screen%20-%20iOS&utm_medium=quick-link"><i class="fab fa-app-store-ios">Apple Store</i></a></p>
+                </div>    
+            </div>     
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h4>Gatherings</h4>
+        </div>
+        <div class="row m-0">
+            <div class="col-12">
+                <div class="row" *ngFor="let event of events" [ngStyle]="box">
+                    <div class="col-12">
+                        <h5>{{ event.title }}:</h5>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="time">Time:</label>
+                        <p id="time">{{ event.time }}</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="contact">Contact:</label>
+                        <p id="contact">{{ event.contact }}</p>
+                    </div>
+                    <div class="col-12">
+                        <label for="info">Info:</label>
+                        <p id="info">{{ event.info }}</p>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

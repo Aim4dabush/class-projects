@@ -1,0 +1,42 @@
+<div class="container-fluid" [ngStyle]="newBackground">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <h3>Edit Task</h3>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="editForm" [ngStyle]="formDesign" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="task">Task</label>
+                    <input class="form-control" formControlName="task" id="task" type="text">
+                    <div class="alert alert-danger" *ngIf="!editForm.controls.task.valid && !editForm.controls.task.touched">
+                        Please update your task!
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="today">Date Started</label>
+                    <input class="form-control" formControlName="today" type="date" id="today">
+                    <div class="alert alert-danger" *ngIf="!editForm.controls.today.valid && !editForm.controls.today.touched">
+                        Please update your starting date!
+                    </div> 
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="completion">Date Completed</label>
+                    <input class="form-control" formControlName="completion" type="date" id="completion">
+                    <div class="alert alert-danger" *ngIf="!editForm.controls.completion.valid && !editForm.controls.completion.touched">
+                        Please update your completion date!
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="btn btn-success" type="submit" [disabled]="!editForm.valid">Update</button>
+                </div>
+                <div class="col-12">
+                    <div class="alert alert-light" *ngIf="!editForm.valid">
+                        *You are missing an update
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

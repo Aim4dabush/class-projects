@@ -1,0 +1,30 @@
+#bot-container {
+    align-items: flex-end;
+    display: flex;
+    height: calc(100vh - 150px);
+}
+.col-2 {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+.col-3 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container-fluid {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQht3idJ1CnIIbVeulVxb1Ns2phutPcG5KfCWceHgT4MAKxKpmk&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+h3 {
+    text-align: center;
+}
+.text-color {
+    color: white;
+}
+#top-container {
+    height: 150px;
+}

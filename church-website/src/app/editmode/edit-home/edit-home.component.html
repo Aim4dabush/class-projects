@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <form [formGroup]="homeEditForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="title">Title</label>
+                        <input class="form-control" type="text" formControlName="title" id="title">
+                    </div>
+                    <div class="col-12">
+                        <label for="time">Time</label>
+                        <input class="form-control" type="text" formControlName="time" id="time">
+                    </div>
+                    <div class="col-12">
+                        <label for="contact">Contact</label>
+                        <input class="form-control" type="text" formControlName="contact" id="contact">
+                    </div>
+                    <div class="col-12">
+                        <label for="info">Info</label>
+                        <textarea class="form-control w-100" formControlName="info" id="info" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="col mt-2">
+                        <button class="btn btn-success d-inline-flex mr-3" type="submit" [disabled]="!homeEditForm.valid"><i class="far fa-check-square"> Submit</i></button>
+                        <p class="d-inline-flex" *ngIf="!homeEditForm.valid">*Please fill out all inputs to submit</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6 mb-2">
+            <div class="row" *ngFor="let gathering of gatherings; let i = index">
+                <div class="col-12">
+                    <h3>{{ gathering.title }}</h3>
+                </div>
+                <div class="col-12">
+                    <label for="time">Time</label>
+                    <p class="form-control" id="time">{{ gathering.time }}</p>
+                </div>
+                <div class="col-12">
+                    <label for="contact">Contact</label>
+                    <p class="form-control" id="contact">{{ gathering.contact }}</p>
+                </div>
+                <div class="col-12">
+                    <label for="info">Info</label>
+                    <textarea class="form-control w-100" name="info" id="info" cols="30" rows="5">{{ gathering.info }}</textarea>
+                </div>
+                <div class="col my-2">
+                    <button class="btn btn-danger" (click)="onDelete(i)"><i class="fas fa-trash-alt"></i> Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

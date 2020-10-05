@@ -1,0 +1,35 @@
+<div class="container-fluid" [ngStyle]="textStyle">
+    <div class="row">
+        <div class="col-12">
+            <div class="row" style="background-color: lightcoral;">
+                <div class="col-12 d-flex justify-content-center">
+                    <h2>Worship Lyrics</h2>
+                </div>
+                <div class="col-12">
+                    <p><strong>HE SAYS,"I WILL DECLARE YOUR NAME TO MY BROTHERS AND SISTERS; IN THE ASSEMBLY I WILL SING YOUR PRAISES." -HEBREWS 2:12</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 p-0 min-vh-100">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Song Title
+                            <small class="d-block">(click song title for lyrics)</small>
+                        </th>
+                        <th scope="col">Artist</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let songLyric of songLyrics">
+                        <td>
+                            <a href="{{ songLyric.lyric }}">"{{ songLyric.songTitle }}"</a>
+                        </td>
+                        <td>{{ songLyric.artist }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

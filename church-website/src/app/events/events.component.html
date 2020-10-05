@@ -1,0 +1,45 @@
+<div class="container-fluid" [ngStyle]="textStyle">
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="row" style="background-color: lightpink">
+                <div class="col-12 d-flex justify-content-center">
+                    <h2>Events</h2>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <p><strong>HE SAID TO THEM,"GO IN TO ALL THE WORLD AND PREACH THE GOSPEL TO ALL CREATION" -MARK 16:15</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center p-0">
+            <img class="img-fluid w-100" src="https://pu5zvw.bn.files.1drv.com/y4mCTJ4D41WwJJo8X5Sh4c34q_lZEk5mRA0T-DdnjuQeVQJsYb8L6dHA72_7qSTucqI49VkMddg12bAIaequ_TB1BRQNvDkR8BDpoLvYd0ZfCMKY_XTAmgyJ8LvApqu2guYa1aMdT_1Wu3ukCl-kqN-443JVoMdKon7D4upcCS7lqAfL0fdn3uvJNfHe-MZE5uwRlbOL1aWA1u0UjJBnpBW2g?width=3024&height=1701&cropmode=none" alt="">
+        </div>
+    </div>
+    <div class="row" *ngFor="let event of events" [ngStyle]="box">
+        <div class="col-12 d-flex justify-content-center">
+            <h4>{{ event.title }}</h4>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <img class="img-fluid" src="{{ event.imagePath }}" alt="{{ event.title }}">
+        </div>
+        <div class="col-12 col-md-4">
+            <p class="d-block">Address(<small>Click address for directions with Google Maps</small>):</p>
+            <a href="{{ event.address.addressLink }}">
+                <p class="d-block">{{ event.address.street }}</p>
+                <p class="d-block">{{ event.address.city }} {{event.address.zipcode }}</p>
+            </a>
+            
+        </div>
+        <div class="col-6 col-md-4">
+            <label for="time">Time:</label>
+            <p id="time">{{ event.time }}</p>
+        </div>
+        <div class="col-6 col-md-4">
+            <label for="date">Date:</label>
+            <p id="date">{{ event.date }}</p>
+        </div>
+        <div class="col-12">
+            <label for="info">Info:</label>
+            <p id="info">{{ event.info }}</p>
+        </div>
+    </div>
+</div>

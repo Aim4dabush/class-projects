@@ -1,0 +1,41 @@
+<div class="container-fluid" [ngStyle]="newBackground">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <h3>Task Form</h3>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="toDoForm" [ngStyle]="formDesign" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="task">Enter Task</label>
+                    <input type="text" formControlName="task" id="task" class="form-control">
+                    <div class="alert alert-danger" role="alert" *ngIf="!toDoForm.controls.task.valid && toDoForm.controls.task.touched">
+                        Please enter a task!
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="today">Today's Date</label>
+                    <input type="date" formControlName="today" id="today" class="form-control">
+                    <div class="alert alert-danger" role="alert" *ngIf="!toDoForm.controls.today.valid && toDoForm.controls.today.touched">
+                        Please choose a start date!
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="completion">Completion Date</label>
+                    <input type="date" formControlName="completion" id="completion" class="form-control">
+                    <div class="alert alert-danger" role="alert" *ngIf="!toDoForm.controls.completion.valid && toDoForm.controls.completion.touched">
+                        Please choose a completion date!
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary" [disabled]="!toDoForm.valid">Start Task</button>
+                </div> 
+                <div class="col-12">
+                    <p *ngIf="!toDoForm.valid">*Must fill out entire form to start task</p>
+                </div> 
+            </div> 
+        </form>
+    </div>
+</div>
+

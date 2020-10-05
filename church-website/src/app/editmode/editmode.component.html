@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-lg-2" style="background-color: #ffc107;">
+      <div class="row">
+        <div class="col d-lg-none">
+          <h4 class="d-inline-flex d-flex align-items-end">Edit Mode</h4>
+          <button class="btn btn-secondary d-inline-flex mx-3" (click)="onClick()"><i class="fas fa-sign-out-alt"> Logout</i></button>
+          <div ngbDropdown class="d-inline-flex">
+            <button class="btn btn-secondary" id="dropdownBasic1" ngbDropdownToggle><i class="fas fa-bars"></i></button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a ngbDropdownItem routerLink="./home">Home Page</a>
+              <a ngbDropdownItem routerLink="./events">Events Page</a>
+              <a ngbDropdownItem routerLink="./edit-lyrics">Lyrics Page</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col d-none d-lg-block vh-100">
+          <h4 style="text-align: center;">Edit Mode</h4>
+          <div class="d-flex justify-content-center my-3">
+            <button class="btn btn-dark" (click)="onClick()"><i class="fas fa-sign-out-alt"> Logout</i></button>
+          </div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="./home">Home Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="./events">Events Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="./edit-lyrics">Lyrics Page</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

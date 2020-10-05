@@ -1,0 +1,44 @@
+<div class="container-fluid" [ngStyle]="newBackground">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <h3>Active List</h3>
+        </div>  
+    </div>
+    <div class="row mb-3">
+        <div class="col d-flex justify-content-center">
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary" id="dropdownBasicOne" ngbDropdownToggle>Sort</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasicOne">
+                    <button ngbDropdownItem (click)="sortByStartDate()">By Start Date</button>
+                    <button ngbDropdownItem (click)="sortByCompletionDate()">By Completion Date(default)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngFor="let taskList of taskLists; let i = index">
+        <div class="col d-flex justify-content-center">
+            <div class="row" [ngStyle]="formDesign">
+                <div class="col-12 mb-2">
+                    <label for="task">Task #{{ i + 1 }}</label>
+                    <input class="form-control" type="text" id="task" value="{{ taskList.task }}" disabled>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="start">Start Date:</label>
+                    <input class="form-control" type="date" id="start" value="{{ taskList.today }}" disabled>
+                </div>
+                <div class="col-12 col-md-4">
+                    <label for="completion">Completion Date:</label>
+                    <input class="form-control" type="date" id="completion" value="{{ taskList.completion }}" disabled>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-end mt-1">
+                    <div class="btn-group" role="group" aria-label="button group">
+                        <button type="button" class="btn btn-warning" (click)="onEdit(i)">Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="onDelete(i)">Delete</button>
+                        <button type="button" class="btn btn-success" (click)="onComplete(i)">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

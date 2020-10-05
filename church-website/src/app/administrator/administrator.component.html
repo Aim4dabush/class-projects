@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12">
+                    <label for="username">Username</label>
+                    <input class="form-control" type="text" formControlName="username" id="username">
+                </div>
+                <div class="col-12">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" formControlName="password" id="password">
+                </div>
+                <div class="col my-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

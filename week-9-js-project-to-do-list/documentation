@@ -1,0 +1,260 @@
+REMEMBER THAT I'M USING MY FILE NAME AND IT CAN BE CHANGED TO WHATEVER YOU NAME YOUR FILE
+INSTRUCTIONS START AFTER CSS FILE, HTML FILE, AND JAVASCRIPT FILE HAS BEEN MADE
+INSTRUCTIONS WILL BE SPECIFIC TO THIS APP DESIGN
+ALL CLASS ATTRIBUTES ARE BOOTSTRAP DESIGN CLASSES
+USE https://getbootstrap.com/docs/4.4/layout/grid/ FOR DOCUMENTATION ON CLASS REFERENCES
+USE https://developer.mozilla.org/en-US/ FOR CSS, HTML, JAVASCRIPT DOCUMENTATION
+
+**1ST STEP: LINKS**
+1. Link javascript and css file to you HTML file.
+    -On line 1 in HTML file type html and select HTML 5
+    -To link css file type below <title></title> in the <head> element the following link:
+        <link rel="stylesheet" href="style.css">
+    -To link javascript file type below the </body> tag:
+        <script src="./script.js"></script>
+2. Link bootstrap grid to :
+    -The website with the link is https://www.bootstrapcdn.com/.
+    -To link bootstrap grid type below the javascript link the following link:
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+
+**2ND STEP: MAIN CONTAINER**
+1. HTML
+    -Main container:
+        -Inside the <body> element type:
+            <div class="container-fluid">
+        -I used container-fluid because it will make the container width most of the screen.
+2. CSS
+    -Style class="container-fluid":
+        -Refer to css stylesheet
+        -Height is 100vh so that the container-fluid height will be the entire screen.
+        -Since height is 100vh all background css will make the image the entire screen.
+        -Padding is 0 auto so that there are no scroll bars on the page.
+        -Font is set here so that all my text will be this style.
+
+**3RD STEP: APP TITLE**
+1. HTML
+    -Title row:
+        -Inside <div class="container-fluid"> element type:
+            <div id="header"></div>
+        -Inside <div id="header"> element type:
+            <div class="row"></div>
+        -Inside <div class="row"> element type:
+            <div class="col"></div>
+        -Inside <div class="col"> element type:
+            <h1>TO DO LIST</h1>
+        -Made it on its row so i can move it around without messing with content
+2. CSS
+    -Set Header height:
+        -Refer to css stylesheet
+        -Wanted the title to take up as least as possible
+    -Make <h1> text center of row:
+        -Refer to css stylesheet
+        -Used text-align
+
+**4TH STEP: APP CONTENT**
+1. HTML
+    -Content row:
+        -On the same indention as <div id="header"> element below </div>:
+            <div id="mainContent"></div>
+        -I give it id="mainContent" to adjust this row height to give rid of whitespace below the background
+
+        -Inside <div id="mainContent"> element type:
+            <div class="row" id="only-row"></div>
+        -I give it id="only-row" to adjust this row height and not the next row or previous row
+
+        -Inside <div class="row"> element type:
+            <div class="col"></div>
+        -This column will be for input and submit button.
+
+        -Below </div> for the input and sumbit button column type:
+            <div class="col"></div>
+        -This column will be for paragraph tag, checkbox, and delete button
+
+        -Inside the last <div class="col"> element type:
+            <div class="row"></div>
+        -I nest another row and column in this column so that this row won't be the same height as the previous row
+        -This makes it easier to align the row contents
+
+        -Inside <div class="row"> element type:
+            <div class="col"></div>
+        -This column is for paragraph tag, checkbox, and delete button
+2.CSS
+    -Set id="mainContent" height:
+        -Refer to css stylesheet
+        -The calc makes it so this id height will take up the rest of the space the header isnt using
+    -Set id="only-row" height:
+        -Refer to css stylesheet
+        -Height is 100% so that this row will take up the rest of the height not taken by the title row.
+
+**5TH STEP: INPUT TEXT AND SUBMIT BUTTON**
+1. HTML
+    -Input:
+        -Inside <div class=col> element indicated for input and submit button type:
+            <label for="inputText">Task</label>
+        -The attribute for="inputText" will link it to the input element id
+
+        -Below </label> element type:
+            <input type="text" id="inputText" placeholder="What needs to be done?">
+
+    -Button:
+        -Below <input> element type:
+            <button>Submit Task</button>
+2. CSS
+    -None yet
+
+**6TH STEP: STYLE INPUT AND BUTTON**
+1. HTML
+    -Input:
+        -Group label and input together
+        -Inside <div class="col"> indicated for input and button type:
+            <div class="form-group"></div>
+        -Highlight label and input
+        -Hold alt and press up or down until lable and input are inside <div class="form-group">
+
+        -Give input a class attribute with:
+            class="form-control mb-2"
+        -Styles the input and gives margin-bottom 2px
+
+    -Button:
+        -Give button a class attribute with:
+            btn btn-primary d-block
+        -Styles button
+        -d-block is an import class for adjusting button positioning
+        
+        -Give button an id attribute with:
+            id="form-button"
+        -Used to position the form button
+
+        -Give button an onclick attribute with:
+            onclick="submitText()"
+        -Used for javascript code
+
+    -Position input and button:
+        -Need to put input and button in the same div to position
+        -Inside <div class="col"> indicated for input and button type:
+            <div id="form"></div>
+        
+        -Highlight <div class="form-group"> and button
+        -Hold alt and press up or down until <div class="form-group"> and button are inside <div id="form">
+
+        -Give the <div class="col"> indicated for input and button more classes:
+            class="col d-flex align-items-center"
+        -Gives the column display flex and makes id="form" align center
+2. CSS
+    -Set id="form" width:
+        -Refer to css stylesheet
+        -Width 100% makes it so the form takes up the width of the column
+    
+    -Position button center:
+        -Refer to css stylesheet
+        -Margin 0 auto along with the class="d-block" centers the button
+
+**7TH STEP: GIVE INPUT and PARAGRAPH TAG FOR JAVASCRIPT**
+1. HTML
+    -Input:
+        -Give <input type="text"> id attribute with:
+            id="inputText"
+
+    -Paragraph Tag:
+        -Give <div class="col"> for paragraph tags id attribute with:
+            id="pTags"
+
+2. CSS  
+    -None
+
+**8TH STEP: JAVASCRIPT**
+1. Call submitText function when you click submit task button:
+    -Add a click event listener to button id="form-button"
+    -Call submitText function when click event occurs
+    -Code is lines 1-4
+
+2. Create submitText function
+    -Add paragraph tag:
+        -Create variable to grab id="inputText"
+        -Create variable to create a new paragraph tag
+        -Create varible to grab div id="pTags"
+        -Add bootstrap classes to position new paragraph tag
+        -Add text from <input type="text"> to new paragraph tag
+        -Create new paragraph inside div id="pTAgs"
+        -Code is lines 9-15
+    
+    -Add checkbox:
+        -Create variable to create a new input
+        -Add a click event for crossOut(id) function
+        -Add bootstrap classes to style and position new checkbox
+        -Add id that is a number equal to the pTag index
+        -Add type="checkbox"
+        -Create new checkbox inside pTag
+        -Code is lines 18-23
+
+    -Add delete button:
+        -Create variable to create a new button
+        -Add a click event for deleteTask(id) function
+        -Add bootstrap classes to style and position new button
+        -Add id that is a number equal to the pTag index
+        -Add delete as text inside the button
+        -Create new checkbox inside pTag
+        -Code is lines 26-31
+
+    -Clear <input type="text">:
+        -Use variable for id="inputText"
+        -Set it to equal an empty string
+        -Code is line 34
+
+3. Create deleteTask(id) function
+    -Delete paragraph, checkbox, and delete button on the same row:
+        -Create a variable to call the div id="pTags" and target all the pTag elements
+        -remove pTag element at id's index
+        -code lines 40-41
+
+    -Reassign id:
+        -After you delete a line id's stay the same and creates a bug with checkboxes and delete buttons
+        -Id adjustments needs to happen after line is deleted
+        -Have deleteTask(id) call reassignId() function
+        -Code is line 43
+
+4. Create reassignId() function
+    -Create a loop to change all id's to the proper index
+    -Code is line 48-56
+
+5. Create crossOut(id) function
+    -Create a variable to grab the 
+    -Create a variable to grab all paragraph tags
+    -Create an if statement that puts a line through a text when a checkbox with the same index is checked
+    -Create an else statement to take away the line when unchecked
+    -Code is line 61-68
+
+**9TH STEP: ADJUST ROW'S, COLUMN'S, AND CHECKBOXES FOR DIFFERENT DEVICES**
+1. HTML
+    -Inspect:
+        -When you view the app on a webpage right click the page
+        -Click 'inspect' and a side panel pops up
+        -At the top left corner of the new panel there are two symbols click the one on the right
+        -Another bar will appear above the page with a drop down menu and resolution numbers
+        -This is how you can view how your app will look on different devices
+
+    -<576px:
+        -Add -12 to <div class="col"> indicated for input and button another class:
+            col-12
+        -col-12 makes input and button take 12 of 12 columns of the app content row
+
+        -Add -12 <div class="col"> indicated for paragraph tags another class:
+            col-12
+        -col-12 makes the paragraph tag take 12 of 12 columns of the nested row
+
+    ->768px:
+        -Give the div for input and button another class next to col-12:
+            col-md-6
+        -col-md-6 makes the input and button take 6 of 12 columns of the app content row
+
+        -Give the div for paragraph tags another class next to col-12:
+            col-md-6 
+        -col-md-6 makes paragraph tag take 6 out of 12 columns of the nested row
+
+    -Checkboxes:
+        -Checkbox size:
+            -Checkbox is hard to see on bigger screens
+            -Refer to css stylesheet input.boxSize (only class that isn't a bootstrap class)
+            -Add boxSize class to class list when you make a new checkbox

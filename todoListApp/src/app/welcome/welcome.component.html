@@ -1,0 +1,18 @@
+<div class="row" [ngStyle]="newBackground">
+    <div class="col d-flex justify-content-center">
+        <div id="welcomePage">
+            <h1>Welcome to your Todo App</h1>
+            <form [formGroup]="welcomeForm" [ngStyle]="formStyle" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input type="text" id="userName" class="form-control"formControlName="username">
+
+                    <div *ngIf="!welcomeForm.valid && welcomeForm.touched" class="alert alert-danger mt-2" role="alert">Please enter a username!</div>
+                    
+                    <button type="submit" class="btn btn-primary mt-2" [disabled]="!welcomeForm.valid">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

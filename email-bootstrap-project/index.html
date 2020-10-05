@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Bootstrap Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- first column -->
+            <div class="col-12 col-lg-2">
+
+                <!-- extra small devices to medium devices -->
+                <div class="row d-lg-none py-2" style="background-color: #007bff;">
+                    <div class="col">
+                        <h4 class="d-inline">Welcome Ikaika!</h4>
+                        <div class="dropdown d-inline">
+                            <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <button class="btn btn-light dropdown-item">Compose</button>
+                                <a class="dropdown-item" href="#">Inbox</a>
+                                <a class="dropdown-item" href="#">Tagged</a>
+                                <a href="#" class="dropdown-item">Important</a>
+                                <a href="#" class="dropdown-item">Sent Mail</a>
+                                <a href="#" class="dropdown-item">Drafts</a>
+                                <a href="#" class="dropdown-item">Trash</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- lg devices and up -->
+                <div class="row d-none d-lg-block vh-100" style="background-color: #007bff;">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h4>Welcome Ikaika!</h4>
+                    </div>
+                    <div class="col-12">
+                        <ul class="nav flex-column">
+                            <li class="nav-item my-5 d-flex justify-content-center">
+                                <button class="btn btn-light w-75">Compose</button>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tagged</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Important</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Sent Mail</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Drafts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Trash</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second column -->
+            <div class="col-12 col-lg-5 mt-2">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5>Martyn Conkling(classroom)</h5>
+                            <small>3 hours ago</small>
+                        </div>
+                        <p class="text-truncate">New material: "Week 29 Class Notes (08/15/20)"</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active my-2">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5>Michael Scott Daily Quotes</h5>
+                            <small>1 day</small>
+                        </div>
+                        <p class="text-truncate">“Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.”</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5>Facebook</h5>
+                            <small>1 day</small>
+                        </div>
+                        <p class="text-truncate">New friend request: <strong>The Rock</strong> would like to be your friend</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- third column -->
+            <div class="col-12 col-lg-5 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <small class="d-block">To: ikaika@gmail.com</small>
+                        <small>From: re-reply@theofficenbc.com</small>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between">
+                        <h2>Michael Scott Quotes</h2>
+                        <small class="d-flex align-items-center">
+                            <i class="fas fa-trash-alt"></i><i class="fas fa-reply mx-2"></i><i class="fas fa-ellipsis-h"></i>
+                        </small>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="d-block">“Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.”</p>
+                        <p class="d-block mt-3">“Guess what, I have flaws. What are they? Oh I don’t know. I sing in the shower. Sometimes I spend too much time volunteering. Occasionally I’ll hit somebody with my car. So sue me.”</p>
+                        <p class="d-block mt-3">“I’m an early bird and a night owl. So I’m wise and have worms.”</p>
+                        <p class="d-block mt-3">“I don’t hate it. I just don’t like it at all and it’s terrible.”</p>
+                        <p class="d-block my-3">“I’m not superstitious but I am a little stitious.”</p>
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <textarea name="" id="" cols="30" rows="10" class="w-100 mt-5"></textarea>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between">
+                        <p><i class="fas fa-paperclip"></i></p>
+                        <button class="btn btn-primary">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
